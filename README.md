@@ -8,7 +8,7 @@ This repository contains a Jupyter Notebook setup that assumes you have [nginx-p
 This setup uses docker-compose and assumes you have nginx-proxy and letsencrypt-nginx-proxy-companion running. In addition, you must
 
 - register a public domain for your Jupyter Notebook. I personally use https://duckdns.org but there are many other options out here.
-- Finally, you must adjust the volume, domain/host and network name in the `docker-compose.yml` file to match your setup.
+- Finally, you must adjust the volume, domain/host and network name in the `.env` file to match your setup.
 
 ## Installation
 

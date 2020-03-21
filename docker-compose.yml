@@ -7,16 +7,16 @@ services:
     ports:
       - 8888:8888
     volumes:
-      - /mnt/md0/jupyter-data:/home/jovyan
+      - ${DATA_DIR}:/home/jovyan
     environment:
       - CHOWN_HOME=yes
       - CHOWN_HOME_OPTS=-R
-      - VIRTUAL_HOST=[[##jupyter.your-domain.org##]]
+      - VIRTUAL_HOST=${JUPYTER_HOST}
       - VIRTUAL_PORT=8888
-      - LETSENCRYPT_HOST=[[##jupyter.your-domain.org##]]
+      - LETSENCRYPT_HOST=${JUPYTER_HOST}
     user: root
 
 networks:
   default:
     external:
-      name: [[##your-network##]]
+      name: ${NETWORK}
