@@ -1,0 +1,22 @@
+version: '3'
+
+services:
+  jupyter:
+    image: jupyter/scipy-notebook
+    restart: always
+    ports:
+      - 8888:8888
+    volumes:
+      - /mnt/md0/jupyter-data:/home/jovyan
+    environment:
+      - CHOWN_HOME=yes
+      - CHOWN_HOME_OPTS=-R
+      - VIRTUAL_HOST=[[##jupyter.your-domain.org##]]
+      - VIRTUAL_PORT=8888
+      - LETSENCRYPT_HOST=[[##jupyter.your-domain.org##]]
+    user: root
+
+networks:
+  default:
+    external:
+      name: [[##your-network##]]
