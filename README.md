@@ -10,7 +10,7 @@ This setup uses docker-compose and assumes you have nginx-proxy and letsencrypt-
 - register a public domain for your Jupyter Notebook. I personally use https://duckdns.org but there are many other options out here.
 - Finally, you must adjust the volume, domain/host and network name in the `docker-compose.yml` file to match your setup.
 
-## Install
+## Installation
 
 Build and run the Jupyter Notebook container by executing the following command:
 
