@@ -1,7 +1,7 @@
 
 # Jupyter Notebook on Docker
 
-This repository contains a Jupyter Notebook setup that assumes you have [nginx-proxy](https://github.com/nginx-proxy/nginx-proxy) and [letsencrypt-nginx-proxy-companion](https://github.com/nginx-proxy/docker-letsencrypt-nginx-proxy-companion) running.
+This repository contains a Jupyter Notebook setup that assumes you have [nginx-proxy](https://github.com/nginx-proxy/nginx-proxy) and [letsencrypt-nginx-proxy-companion](https://github.com/nginx-proxy/docker-letsencrypt-nginx-proxy-companion) running. The Notebook itself is based on the `jupyter/scipy-notebook` image but also adds the [jupyter_contrib_nbextensions](https://github.com/ipython-contrib/jupyter_contrib_nbextensions) to improve the user experience.
 
 ## Prerequisites
 
